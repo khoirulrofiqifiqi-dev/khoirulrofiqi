@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiki Shopp - Frontend E-commerce</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Fiki Shopp</h1>
+        <button id="cart-toggle">Keranjang (<span id="cart-count">0</span>)</button>
+    </header>
+
+    <main>
+        <section id="products">
+        <h2>Produk</h2>
+            <div id="product-grid">
+                <!-- Products will be populated by JS -->
+            </div>
+        </section>
+
+        <aside id="cart" class="hidden">
+            <h2>Keranjang Anda</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">Total: $0.00</div>
+            <button id="checkout-btn">Lanjut ke Pembayaran</button>
+        </aside>
+
+        <section id="checkout" class="hidden">
+            <h2>Pembayaran</h2>
+            <form id="checkout-form">
+                <label for="name">Nama:</label>
+                <input type="text" id="name" required>
+                <label for="address">Alamat:</label>
+                <textarea id="address" required></textarea>
+                <label for="payment">Metode Pembayaran:</label>
+                <select id="payment" required>
+                    <option value="credit">Kartu Kredit</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="cash">Bayar di Tempat</option>
+                </select>
+                <button type="submit">Selesaikan Pembelian</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
